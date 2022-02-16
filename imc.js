@@ -1,4 +1,5 @@
 const calcular = document.getElementById('calcular');
+const peso = document.getElementById('peso')
 
 function imc() {
     const nome = document.getElementById('nome').value;
@@ -34,4 +35,11 @@ function imc() {
     }
 }
 
+function noEnter (event) {
+    if (event.keyCode == 13){
+        imc()
+    }
+    
+}
 calcular.addEventListener('click', imc);
+peso.addEventListener('keydown', noEnter)
